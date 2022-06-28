@@ -11,6 +11,8 @@
   --acceent-color: #2196f3;
   --primary-bg-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
+
+  --anim: 250ms ease-in-out;
 }
 
 /* main */
@@ -77,6 +79,8 @@ p {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  transition: color var(--anim);
 }
 
 .logo.link {
@@ -98,6 +102,9 @@ p {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color var(--anim);
+
   /* padding: 32px 0; */
 }
 
@@ -105,14 +112,27 @@ p {
   color: var(--acceent-color);
 }
 
+.site-nav .current::after {
+  content: '';
+  display: block;
+  width: 100%;
+}
+
 .contacts-nav .link {
   color: var(--primary-text-color);
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color var(--anim);
+
   /* padding: 32px 0; */
   /* display: inline-block;
   align-items: center; */
+}
+
+.footer-list .link {
+  transition: color var(--anim);
 }
 
 .site-nav .link:hover,
@@ -153,11 +173,6 @@ p {
   margin-right: 10px;
   fill: currentColor;
 }
-
-/* .icon-mail:hover,
-.icon-phone:hover {
-  color: var(--acceent-color);
-} */
 
 /* hero */
 
@@ -371,6 +386,8 @@ p {
   height: 44px;
   background-color: var(--primary-bg-color);
   border-radius: 50%;
+
+  transition: background-color var(--anim);
 }
 
 .social-links {
@@ -396,7 +413,9 @@ p {
   margin-top: 50px;
 }
 
-.clients-item {
+/* .clients-item {
+  transition: border var(--anim);
+
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -404,10 +423,20 @@ p {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-}
+} */
 
 .clients-link {
-  padding: 16px 32px;
+  /* padding: 16px 32px; */
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border var(--anim);
 }
 
 .clients-link:hover .clients-icons,
@@ -415,13 +444,15 @@ p {
   fill: var(--acceent-color);
 }
 
-.clients-item:hover,
-.clients-item:focus {
+.clients-link:hover,
+.clients-link:focus {
   border: 1px solid var(--acceent-color);
 }
 
 .clients-icons {
   fill: #afb1b8;
+
+  transition: fill var(--anim);
 }
 
 /* footer */
@@ -447,6 +478,8 @@ p {
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition: background-color var(--anim);
 }
 
 .footer-link-item:hover,
@@ -470,6 +503,8 @@ p {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+
+  transition: color var(--anim);
 }
 
 .footer .logo:hover,
@@ -557,6 +592,8 @@ p {
 .portfolio-link {
   text-decoration: none;
   color: inherit;
+
+  transition: box-shadow var(--anim);
 }
 
 .portfolio-link:hover,
@@ -584,6 +621,9 @@ p {
   border: transparent;
   border-radius: 4px;
   padding: 6px 22px;
+
+  transition: color var(--anim);
+  transition: background-color var(--anim);
 }
 
 .portfolio-button:hover,
