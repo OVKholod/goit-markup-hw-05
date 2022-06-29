@@ -54,7 +54,7 @@
       <section class="hero overlay">
         <div class="hero-container container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="hero-button" type="button">Заказать услугу</button>
+          <button class="hero-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -116,28 +116,37 @@
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="work-list">
             <li>
-              <img
-                src="./images/index/box-1.jpg"
-                alt="процесс написания кода"
-                width="370"
-                height="294"
-              />
+              <div class="work-container-img">
+                <img
+                  src="./images/index/box-1.jpg"
+                  alt="процесс написания кода"
+                  width="370"
+                  height="294"
+                />
+                <p class="work-title-p">Десктопные приложения</p>
+              </div>
             </li>
             <li>
-              <img
-                src="./images/index/box-2.jpg"
-                alt="процесс подбора интерфейса"
-                width="370"
-                height="294"
-              />
+              <div class="work-container-img">
+                <img
+                  src="./images/index/box-2.jpg"
+                  alt="процесс подбора интерфейса"
+                  width="370"
+                  height="294"
+                />
+                <p class="work-title-p">Мобильные приложения</p>
+              </div>
             </li>
             <li>
-              <img
-                src="./images/index/box-3.jpg"
-                alt="процесс подбора стиля"
-                width="370"
-                height="294"
-              />
+              <div class="work-container-img">
+                <img
+                  src="./images/index/box-3.jpg"
+                  alt="процесс подбора стиля"
+                  width="370"
+                  height="294"
+                />
+                <p class="work-title-p">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -396,5 +405,16 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="btn-close" type="button" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#vector"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
